@@ -129,15 +129,17 @@ The fellowship will culminate in establishing the groundwork for a dedicated non
 
 \section{Background}
 \subsection{Candidate Measures of Consciousness}
-To study consciousness in AI, in particular LLMs based AI we cannot only rely on input-output behavioural experiments to assess the probability that current and future LLMs are conscious. The main reason is that LLMs are precisely the sort of systems that have been trained to simulate human behaviour, in particular humans engaged in tasks relying on natural language.
+To study consciousness in AI, particularly in large language models, we cannot rely solely on behavioral experiments that analyze input-output patterns. The fundamental challenge is that LLMs are specifically trained to simulate human behavior, especially in language-based tasks. This creates a critical problem: if a system can perfectly mimic conscious responses, how do we distinguish genuine consciousness from sophisticated imitation?
 
-Instead it is preferable to assess consciousness in AI systems by monitoring both behaviour of some LLM and the dynamics of its neural activations in LLMs while they engage in that behaviour. This is because we have a state of the art knowledge of measures of consciousness in humans and we can use this knowledge to assess the consciousness of AI systems.
+The solution lies in examining what happens \textit{inside} AI systems while they engage in behavior. Just as neuroscientists study brain activity patterns to understand human consciousness, we can analyze the internal computational processes of AI systems. Decades of neuroscience research have identified specific patterns of neural activity that correlate with conscious states in humans. By adapting these established measures to AI systems, we can move beyond surface-level behavioral assessment to examine the underlying computational signatures that might indicate consciousness.
 
-Let $x_{t+1} = M(w, x_t)$ be the output of some AI model $M$ with parameters $w$ (for example $M$ could be a transformer architecture). We consider $X_t = e(x_t)$ to be the embedding of the token $x_t$. The collection of vector $X^(l)_t$ for each layers of the architecture are the neural activations of the model $M$. They are related to each others deterministically via the parameters $w$. Since the tokens $x_t$ are random variables sampled from the distribution of human language, the activations $X_t$ are also random variables with some underlying probability distribution. The neural computation is the collection of activations at all time steps $(X_t)_{t\in E}$ for some epoch of time $E$. 
-We would like to have some measure $C$ such that $C(X_{t\in E})$ measure the degree (or classify) of consciousness over the epoch $E$.
-\\
-\\
-For example, suppose that we instruct the model $M$ with a sequence of tokens $q$. After seeing the sequence $q$ the model take a sequence of actions in the form of a sequence of tokens $b$: the behavior of the model $M$. We are interested in measuring $C((X_t)|q)$ for $t$ running over the indices of the tokens in the sequence $b$ given instruction $q$. In particular, we want to compare $C((X_t)|q_1)$ and $C((X_t)|q_2)$ for two different instructions $q_1$ and $q_2$ instructing the model to engage in behaviour mimicking different states of consciousness in humans. We want to test the hypothesis that $C_M(X_{t\in E}|q_1) > C_M(X_{t\in E}|q_2)$ when we know that $C_H(X_{t\in E}|q_1) > C_H(X_{t\in E}|q_2)$ where $H$ is a human performing a similar task.
+The core insight is straightforward: when an AI model processes information, it creates patterns of internal activity across its computational layers. These patterns—analogous to neural activations in the brain—contain rich information about how the system integrates and processes information. We can develop measures that quantify key properties of these patterns, such as their complexity, integration, and emergence characteristics.
+
+Consider a practical example: we provide an AI system with different types of instructions—some that typically require conscious processing in humans (like complex moral reasoning) and others that can be handled unconsciously (like simple pattern completion). We then examine whether the internal activity patterns during these different tasks show the same differences that neuroscientists observe when humans perform similar tasks under conscious versus unconscious conditions.
+
+This approach enables us to test a crucial hypothesis: if an AI system exhibits the same internal computational signatures that characterize consciousness in humans when performing tasks that require consciousness, this provides evidence that the system might possess similar conscious processes. Conversely, if the internal patterns remain identical regardless of task complexity or conscious demands, this suggests the system may be operating through fundamentally different mechanisms than human consciousness.
+
+The key advantage of this methodology is that it leverages our most advanced scientific understanding of consciousness while avoiding the trap of relying solely on behavioral mimicry. By examining internal computational processes, we can potentially detect consciousness even in systems designed to simulate human responses.
 \\
 \\
 %============================================================================
@@ -145,16 +147,15 @@ For example, suppose that we instruct the model $M$ with a sequence of tokens $q
 % We review the main measures of consciousness that have been applied in the brain and how they correlate with global states of consciousness in humans.
 
 \subsubsection{Complexity measures}
-% Talk about the different complexity measures of consciousness
-% Lempel ziv complexity
-% Perturbation complexity index 
-% Correlation with global states of consciousness in humans.
-% Doubt about wether complexity is a good measure of consciousness and risk that it is too human-centric.
-% Talk about causal density and weak IIT measurees
 
-% Paragraph on measures of integration and differentiation in the brain. (could perhaps use some of my thesis here)
+Complexity measures represent the most empirically validated approach to consciousness assessment, with over two decades of research demonstrating their reliability across diverse states of consciousness in humans. These measures capture a fundamental insight: conscious experience appears to require a specific type of neural complexity that balances two seemingly opposing properties—\textit{integration} (the system behaving as a unified whole) and \textit{differentiation} (the system maintaining diverse, distinguishable patterns of activity). When consciousness is present, brain activity exhibits rich, varied patterns that nonetheless remain coordinated across different regions. When consciousness is absent—during deep sleep, anesthesia, or disorders of consciousness—neural activity becomes either overly synchronized and stereotypical or fragmented into independent local patterns.
 
-% Paragraph on how they are correlated with global states of consciousness in humans.
+The most prominent complexity measures fall into two categories: temporal complexity measures and perturbational complexity measures. Temporal complexity measures analyze the richness and unpredictability of ongoing neural activity patterns. The Lempel-Ziv Complexity Index quantifies how many distinct patterns appear in neural signals over time, essentially measuring the "algorithmic complexity" of brain activity—conscious states consistently show higher Lempel-Ziv complexity than unconscious states across multiple studies. Neural Complexity, introduced by Tononi and Edelman, specifically measures the balance between integration and segregation in neural dynamics, capturing how brain regions maintain both specialized processing and coordinated interaction. These measures have proven remarkably consistent across different experimental paradigms, consistently distinguishing conscious from unconscious states with high accuracy.
+
+Perturbational complexity measures represent a more sophisticated approach that actively probes the brain's capacity for complex responses. The Perturbational Complexity Index (PCI) works by applying transcranial magnetic stimulation to the brain and measuring the complexity of the resulting neural response patterns. When conscious, the brain responds to perturbations with rich, diverse activity that spreads across multiple regions in complex spatiotemporal patterns. During unconscious states, the same perturbations produce either local responses that fail to propagate or simple, stereotypical responses across the brain. PCI has achieved 100\% accuracy in distinguishing conscious from unconscious states across a remarkable range of conditions, including wakefulness, all stages of sleep, various forms of anesthesia, and patients with disorders of consciousness. Recent advances have developed faster computational variants like PCIST that can assess perturbational complexity in real-time, making these measures increasingly practical for clinical and research applications.
+
+Integration and differentiation measures provide the theoretical foundation underlying complexity approaches, drawing from both Integrated Information Theory and causal analysis frameworks. Causal density measures the overall causal interactivity within a neural system using time-series analysis to quantify how much different brain regions causally influence each other—high causal density indicates that the system operates as an integrated whole rather than a collection of independent parts. Weak approaches to Integrated Information Theory offer computationally tractable approximations of the full IIT framework, focusing on measuring how much information a system generates that cannot be reduced to its individual parts. These measures capture the intuition that consciousness requires genuine system-level properties that emerge from but cannot be predicted by the activity of isolated components. While full IIT calculations remain computationally intractable for realistic brain networks, weak IIT approaches and causal density measures provide practical implementations that have shown promising results in consciousness research, offering theoretically grounded methods for quantifying the integration-differentiation balance that appears fundamental to conscious experience. 
+
 
 \subsubsection{Measures of emergence}
 % Talk about dynamical independence and synergistic information
@@ -341,6 +342,16 @@ The combination of technical rigor, practical application, and strategic dissemi
 \appendix
 
 \section{Technical Details: Consciousness Measures}
+
+\subsection{Formal formulation of consciousness assessment}
+
+The following provides the formal mathematical framework underlying our approach to consciousness assessment in AI systems.
+
+Let $x_{t+1} = M(w, x_t)$ be the output of some AI model $M$ with parameters $w$ (for example $M$ could be a transformer architecture). We consider $X_t = e(x_t)$ to be the embedding of the token $x_t$. The collection of vector $X^{(l)}_t$ for each layer $l$ of the architecture are the neural activations of the model $M$. They are related to each other deterministically via the parameters $w$. Since the tokens $x_t$ are random variables sampled from the distribution of human language, the activations $X_t$ are also random variables with some underlying probability distribution. The neural computation is the collection of activations at all time steps $(X_t)_{t\in E}$ for some epoch of time $E$.
+
+We would like to have some measure $C$ such that $C(X_{t\in E})$ measures the degree (or classifies) consciousness over the epoch $E$.
+
+For example, suppose that we instruct the model $M$ with a sequence of tokens $q$. After seeing the sequence $q$ the model takes a sequence of actions in the form of a sequence of tokens $b$: the behavior of the model $M$. We are interested in measuring $C((X_t)|q)$ for $t$ running over the indices of the tokens in the sequence $b$ given instruction $q$. In particular, we want to compare $C((X_t)|q_1)$ and $C((X_t)|q_2)$ for two different instructions $q_1$ and $q_2$ instructing the model to engage in behavior mimicking different states of consciousness in humans. We want to test the hypothesis that $C_M(X_{t\in E}|q_1) > C_M(X_{t\in E}|q_2)$ when we know that $C_H(X_{t\in E}|q_1) > C_H(X_{t\in E}|q_2)$ where $H$ is a human performing a similar task.
 
 % MATHEMATICAL FORMULATIONS:
 % Detailed equations for each measure
