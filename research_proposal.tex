@@ -1,0 +1,351 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{fancyhdr}
+\usepackage{abstract}
+
+% Page geometry
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% Custom colors for emphasis
+\definecolor{darkblue}{RGB}{0,0,139}
+\definecolor{highlight}{RGB}{255,255,0}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    citecolor=darkblue,
+    urlcolor=darkblue
+}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Research Fellowship Proposal - Digital Sentience}
+\lfoot{\small [Your Name]}
+\rfoot{\small Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Custom commands for highlighting important points
+\newcommand{\impact}[1]{\textbf{\textcolor{darkblue}{#1}}}
+\newcommand{\novel}[1]{\textit{#1}}
+
+\begin{document}
+
+% Abstract
+\newpage
+\begin{abstract}
+\noindent
+% Write a compelling 200-250 word abstract that emphasizes:
+% 1. The urgent need for consciousness assessment in AI
+% 2. Your novel technical approach
+% 3. Expected impact on the field
+% 4. Concrete deliverables
+
+As AI systems become increasingly sophisticated, the question of digital sentience moves from philosophical speculation to practical necessity. This research proposal outlines a comprehensive framework for assessing potential consciousness in artificial systems, bridging theoretical foundations with actionable evaluation tools. 
+
+% Continue abstract here...
+
+\end{abstract}
+
+% Table of Contents
+\tableofcontents
+\newpage
+\section{Planning}
+We write a plan for the research proposal. First we need to introduce and motivate the problem. We need to explain why it's important to evaluate consciousness in the AI system now. We need to explain what has been done in evaluating our consciousness. And we need to explain what are the main contributions that we are going to do during the fellowship.
+
+In the second section we'll cover some background, in particular we will explain the main measures of consciousness that we are considering. We are going to explain how these measures have been applied to human brains, to measure levels of consciousness in humans. The goal is to be accessible and non-technical and refer to the appendices for more technical details about the different measures. The goal is also to try to do a kind of systematic literature review on the different ways these measures have been applied to humans.
+
+In the next section, I will detail the experiments that we are going to run, how we are going to apply these measures to LLMs, in which behavioral experiments we are going to apply them, the specific hypothesis that I intend to test, and the kind of results that I would expect to get and how I would interpret them. In this section it would be good to have a diagram that also summarized the approach and that makes it accessible and easy to understand.
+
+Then there is another section where I talk about the resources that I will need, the collaborations that I expect to have, the workshops that I expect to organize, the scientific papers that I would like to get.
+
+Then there is another section where I explain milestones.
+
+Then there is another section on longer term vision and career development and finally the project allocation.
+
+Then there is a conclusion and a pantheism where there's more technical detail about the measures of consciousness, the potential experiments.
+
+In terms of time allocations, I have Saturday, part of Sunday to work on the research proposal. I also have next weekends. So overall I have about three working days. So I propose to have one working day on the background, one working day on the experiments, and then finish the rest as quickly as possible and send it for review. So until Sunday I will work on background and experiments and feel as much as possible to send it to Anil for feedback.
+%============================================================================
+\section{Introduction and Motivation}
+\label{sec:introduction}
+
+% Start with impact and urgency
+\subsection{The importance of assessing digital consciousness}
+The rapid advancement of AI systems presents a time-sensitive challenge: \impact{how do we determine whether artificial intelligence possesses subjective experience?} Addressing this question is important for two critical reasons.
+
+First, if an AI system is conscious—and particularly if it is sentient, capable of experiencing pleasant and unpleasant states—it could qualify as a moral patient. This status would obligate us to consider its welfare in our decisions and actions. The scale of this consideration could be unprecedented: digital minds might eventually outnumber both humans and animals by many orders of magnitude, potentially making digital welfare the most significant component of overall welfare in our future. Second, we must avoid the opposite error of mistakenly attributing consciousness to non-conscious systems, as welfare considerations could conflict with essential AI safety measures and capability development. Understanding consciousness in AI systems could help us better navigate this alignment-welfare trade-off, ensuring we neither unnecessarily constrain beneficial AI development nor inadvertently cause massive suffering.
+
+This issue is urgent. Within the next few years, we may develop AI systems that surpass human experts across most domains. Decision-makers are already making choices about AI architectures and training methods that could become deeply entrenched. If these designs inadvertently create conscious systems, economic incentives and path dependencies could make it difficult to pivot away from potentially harmful approaches—similar to how factory farming became entrenched despite ethical concerns. Yet we currently lack reliable methods to assess consciousness in these systems. This gap stems partly from consciousness science being in its infancy, but more critically from the scarcity of empirical research specifically targeting AI consciousness assessment.
+
+We have a critical window of opportunity to build a field dedicated to evaluating AI consciousness and developing interventions to safeguard AI welfare before these questions become politically charged or economically contentious. By establishing research programs, developing assessment frameworks, and training experts now, we can shape how society approaches these questions rather than scrambling to respond once the issue becomes prominent. Early field-building efforts can help ensure that when pivotal decisions about AI consciousness need to be made, we have the knowledge, tools, and institutional capacity to make them wisely.
+
+This challenge remains severely neglected. Only a handful of researchers possess the necessary combination of expertise—spanning neuroscience of consciousness, AI safety, and the commitment to prioritize AI consciousness assessment.
+
+\subsection{Current Landscape and Critical Gaps}
+%There has been work in assessing consciousness in AI systems. However it has mostly conceptual, looking into behavioural experiments, or surveying experts to probe their opinions about wether some consciousness indicator would be present in AI systems. 
+% There is currently a big gap in doing some direct empirical work that use our state of the art knowledge of measures of consciousness on models from which we can access internal activations.
+% Do a deep research on the topic of assessing consciousness in AI systems.
+The landscape of AI consciousness assessment has evolved from philosophical speculation to systematic empirical investigation, though significant implementation gaps remain. The most comprehensive framework emerged from Butlin et al. (2023), who assembled 19 experts to develop computational indicators derived from neuroscientific theories of consciousness. Their framework operationalizes Global Workspace Theory, Integrated Information Theory, and Higher-Order Theories into 14 measurable computational criteria, providing the first systematic methodology for evaluating consciousness in AI systems. However, empirical testing of this framework on systems including GPT-3, GPT-4, and other frontier models revealed that no current AI architecture satisfies the full set of consciousness indicators (Butlin et al., 2023).
+
+Information-theoretic approaches from neuroscience offer established methods for consciousness assessment, yet remain critically underutilized in AI research. Measures such as Lempel-Ziv Complexity and Perturbational Complexity Index have proven successful in human consciousness research (Schartner et al., 2015; Casali et al., 2013), while Integrated Information Theory provides mathematical frameworks for quantifying consciousness through $\phi$ calculations (Tononi, 2015). However, direct application to AI systems faces computational intractability—calculating $\phi$ for networks larger than 12 nodes remains computationally impossible, leading researchers to develop approximation methods that have yet to be systematically applied to large language models (Tegmark, 2016).
+
+Current AI architectures present fundamental constraints for consciousness implementation. Transformer architectures lack the recurrent processing loops, global workspace integration, and higher-order monitoring systems required by major consciousness theories (Butlin et al., 2023). However, while the architectures themselves may not incorporate design features compatible with consciousness indicators, computational processes at the representational level might exhibit consciousness-relevant properties. For instance, attention mechanisms could potentially implement aspects of Global Workspace Theory through competition and information integration across layers, though this remains largely unexplored through direct measurement of internal activations.
+
+Recent work by Rethink Priorities (2025) has advanced the field through comprehensive expert surveys, defining multiple consciousness indicators and systematically gathering expert assessments about whether current AI systems possess these properties. This approach provides valuable consensus-building and identifies areas of agreement and disagreement among researchers. However, this methodology relies on external expert judgment rather than direct empirical measurement of AI systems' internal states, leaving a critical gap between theoretical assessment and computational verification.
+
+The most significant research gap lies in the absence of direct empirical methods that apply neuroscience-based information-theoretic measures to AI neural activations. While conceptual frameworks and expert assessments provide important foundations, the field lacks systematic approaches for measuring consciousness-relevant computational processes within AI systems. Direct analysis of transformer hidden states, attention patterns, and layer-wise representations using established neuroscience techniques—including mutual information analysis, complexity measures, and causal intervention methods—could transform consciousness assessment from behavioral observation to quantitative measurement of internal processing dynamics. This gap represents both the primary limitation of current approaches and the most promising direction for advancing our understanding of potential consciousness in artificial intelligence systems.
+
+\subsection{Contributions of the fellowship}
+This fellowship will establish the foundation for the first comprehensive, practically-applicable framework for consciousness assessment in AI systems, bridging critical gaps between theoretical proposals and empirical implementation. The research program will yield concrete outputs across three interconnected dimensions: advancing scientific knowledge, building field capacity, and establishing institutional infrastructure for long-term impact.
+
+The primary research contribution will be the development and validation of a consciousness classifier incorporating state-of-the-art measures adapted from neuroscience literature. This novel tool will enable direct empirical assessment of consciousness-relevant features in AI systems, moving beyond current conceptual frameworks to provide actionable metrics. The classifier will be rigorously tested through controlled experiments on open-source language models, including simulations of altered consciousness states analogous to human conditions. These empirical investigations will generate 4-5 peer-reviewed publications targeting top-tier venues, including a comprehensive framework paper, methodological implementation studies, and empirical validation reports.
+
+Beyond individual research outputs, the fellowship will catalyze field-building through strategic knowledge dissemination and community engagement. I will organize specialized workshops and retreats bringing together experts from consciousness studies, AI safety, and digital sentience to foster interdisciplinary collaboration and establish shared research agendas. Presentations at top-tier AI conferences will introduce these methods to broader technical audiences, while targeted outreach will help research labs integrate consciousness assessment tools into their development pipelines. These activities will position me as a bridge between theoretical consciousness research and practical AI development, creating networks essential for field growth.
+
+The fellowship will culminate in establishing the groundwork for a dedicated nonprofit organization focused on empirical consciousness assessment in AI systems. This institutional platform will provide sustained infrastructure for advancing the field beyond the fellowship period, offering consulting services to AI labs, developing open-source assessment tools, and maintaining research continuity. By combining rigorous empirical methods with strategic field-building and institutional development, this fellowship will create lasting impact on our capacity to understand and assess consciousness in AI systems.
+
+\section{Background}
+\subsection{Candidate Measures of Consciousness}
+To study consciousness in AI, in particular LLMs based AI we cannot only rely on input-output behavioural experiments to assess the probability that current and future LLMs are conscious. The main reason is that LLMs are precisely the sort of systems that have been trained to simulate human behaviour, in particular humans engaged in tasks relying on natural language.
+
+Instead it is preferable to assess consciousness in AI systems by monitoring both behaviour of some LLM and the dynamics of its neural activations in LLMs while they engage in that behaviour. This is because we have a state of the art knowledge of measures of consciousness in humans and we can use this knowledge to assess the consciousness of AI systems.
+
+Let $x_{t+1} = M(w, x_t)$ be the output of some AI model $M$ with parameters $w$ (for example $M$ could be a transformer architecture). We consider $X_t = e(x_t)$ to be the embedding of the token $x_t$. The collection of vector $X^(l)_t$ for each layers of the architecture are the neural activations of the model $M$. They are related to each others deterministically via the parameters $w$. Since the tokens $x_t$ are random variables sampled from the distribution of human language, the activations $X_t$ are also random variables with some underlying probability distribution. The neural computation is the collection of activations at all time steps $(X_t)_{t\in E}$ for some epoch of time $E$. 
+We would like to have some measure $C$ such that $C(X_{t\in E})$ measure the degree (or classify) of consciousness over the epoch $E$.
+\\
+\\
+For example, suppose that we instruct the model $M$ with a sequence of tokens $q$. After seeing the sequence $q$ the model take a sequence of actions in the form of a sequence of tokens $b$: the behavior of the model $M$. We are interested in measuring $C((X_t)|q)$ for $t$ running over the indices of the tokens in the sequence $b$ given instruction $q$. In particular, we want to compare $C((X_t)|q_1)$ and $C((X_t)|q_2)$ for two different instructions $q_1$ and $q_2$ instructing the model to engage in behaviour mimicking different states of consciousness in humans. We want to test the hypothesis that $C_M(X_{t\in E}|q_1) > C_M(X_{t\in E}|q_2)$ when we know that $C_H(X_{t\in E}|q_1) > C_H(X_{t\in E}|q_2)$ where $H$ is a human performing a similar task.
+\\
+\\
+%============================================================================
+\label{sec:background}
+% We review the main measures of consciousness that have been applied in the brain and how they correlate with global states of consciousness in humans.
+
+\subsubsection{Complexity measures}
+% Talk about the different complexity measures of consciousness
+% Lempel ziv complexity
+% Perturbation complexity index 
+% Correlation with global states of consciousness in humans.
+% Doubt about wether complexity is a good measure of consciousness and risk that it is too human-centric.
+% Talk about causal density and weak IIT measurees
+
+% Paragraph on measures of integration and differentiation in the brain. (could perhaps use some of my thesis here)
+
+% Paragraph on how they are correlated with global states of consciousness in humans.
+
+\subsubsection{Measures of emergence}
+% Talk about dynamical independence and synergistic information
+Imagine a complex system with many interacting microscopic components, for example connected neurons interacting across the layers of some deep neural network of some AI system. Understanding the system from its microscopic components is computationally challenging and generally not the most effective scale to understand the behaviour downstream of that neural activity. Instead we are interested in finding useful coarse-grainings of some system-variables that simplify the microscopic interactions between the neurons to capture the neural activity of the AI system. Such coarse grained variables can display a rich behaviour that is not apparent from the microscopic components alone in which case we say that such variables are \textit{emergent}. The prototypical example of a system displaying emergent phenomena is a flock of birds in which individual interactions between brids give rise to novel dynamics at the level of the flock which can be described in its own terms by macroscopic variables coarse-grained from the individual birds.
+
+The first class of measures of measure of emergence that I am interest in is concerned with the notion of \textit{information closure}. A coarse graining of a system is informationally closed if it is independent from the microscopic components from the point of view of predicting its own future behaviour i.e. no information from the microscopic components can improve the prediction about the future behaviour of the coarse grained variables of the system. For example, in the case of an ideal gas at equilibrium under moderate conditions, macroscopic variables like temperature, volume, and pressure are sufficient to describe its thermodynamic behavior without explicit reference to individual molecules and their interactions. 
+
+One particular approach to measuring information closure is dynamical independence (ref). Dynamical independence is a tractable measures of information closure in linear dynamical systems that has been developed in the context of neuroscience (ref) and applied to simulated data (ref). While dynamical independence has not yet been applied as a measure of consciousness in humans, a natural hypothesis would be to test is to estimate to estimate dynamical independence over the activations of the neural network to estimate while it engage it some behavioural tasks to measure its emergence capacity. Here emergence capacity would be measure as the amount of dynamically independent variable across various scales of linear coarse-grainings.  
+
+The second class of measures of emergence that I am interested in applying would be to look into \textit{whole-part} measure of emergence via \textit{synergistic information}. Synergistic information is a measure of the information that is gained by considering the joint distribution of mutiple variables compared to the information that is gained by considering each variable independently. Synergistic information has been identified as a promising measures of emergence in the context of neuroscience (ref) and has been related to the emergence of a global neural workspace in the brain (ref). Conceptually, synergistic information comes from the formalism of mutual information decomposition which decomposes the mutual information between two variables into three terms: unique, redundant and synergistic information between random variables (ref). Using synergistic information, we could measure the emergence capacity of a system across groupings of pairs of neurons in a neural network.
+
+\subsubsection{Applications in humans}
+
+%============================================================================
+\section{Experimental paradigm}
+\label{sec:experimental_paradigm}
+
+% Define key terms and metrics
+% Explain measurable proxies for consciousness-relevant features
+As we have seen, multiple measures of levels of consciousness have been proposed in the literature. The goal of this project would be to build a consciousness classifier from these measures that has been shown to classify global states of consciousness in humans. Broadly speaking, I propose to decompose these measures into three classes: measures of complexity $\chi$, measures of information integration and differentiation $\phi$, and measures of emergence $\psi$. 
+\\
+\\
+Consider an LLM doing some task i.e. predicting some output token $x_t^+$ given an input sequence $x_t^-$. We denote by $X_t^l$ the vector of neural activations of the LLM at token $t$ and layer $l$ and we note $X_t = (X_t^1, \ldots, X_t^L)$ the vector of all neural activations at token $t$. Denote $\psi(X_t)$ the complexity of the neural activations at token $t$. An example of such a measure of complexity is the entropy rate of the neural activations at token $t$. Essentially, the entropy rate $H(X_t | X_t^-)$ measures the entropy of the neural activation $X_t$ at token $t$ conditioned on the past activations $X_t^-$. As a proxy of entropy rate, we could use Lempel-Ziv complexity (ref) which is a measure of the complexity of a sequence of symbols that has been previously used in neuroscience to measure signal diversity.
+\\
+\\
+For measures of information integration and differentiation, we could use the recent work on mutual information decomposition (ref). Given three random variables $X, Y, Z$, the mutual information $I((X Y);Z)$ can be decomposed into three terms: unique information that each random variable has about $Z$, information that is redundant across $X$ and $Y$ to predict $Z$ and synergistic information $I(X; Y; Z)$. For an LLM we could for example consider $X$ and $Y$ could be some partition of past activations of the LLM and $Z$ could be the current overall activations of the LLM. But other partitions are possible and should be investigated. Information differentiation and integration would be high if the amount of synergistic information and the amount of unique information are high. Recent work by Rosas et al. has shown a scalable approach to perform mutual information decomposition on deep neural networks that I would leverage to measure information integration and differentiation in the activations of the LLM (ref: scalable approach to info decomposition).
+\\
+\\
+A particular class of measures of emergence is the notion of information closure. Information closure can be estimated via dynamical independence (ref). In particular, given some neural activations $X_t$ at token $t$, we could estimate the emergence capacity $\psi_c((X_t)_{t\in E})$ in the LLM during inference during some epoch $E$ correpsonding to a particular behaviour of the LLM. This could be done by estimating the number of informationally closed coarse-grainings across projections of the activations of the LLM over subspaces of lower dimension. We would leverage previous work on estimating dynamical independence in linear stochastic dynamical systems (ref) to estimate the amount of information closure in the activations of the LLM. 
+% Take example of models that we could use
+% Take example of experiments that we could run
+The overall indicator of consciousness would be a weighted sum of the measures of complexity, information integration and differentiation, and emergence capacity.
+\\
+\\
+We would estimate these measures on LLMs during different conditions. LLM engaging in conscious-like behaviour and unconscious-like behaviour. An example of a conscious-like behaviour would be an LLM engaging in a task that requires meta-cognition. For example, we could have the LLM engage in various tasks that usually requires conscious processing in humans such as engaging in mathematical reasoning. Another interesting task to investigate would be to have an LLM doing introspection. We could also use less introspective tasks and morally more salient tasks such as an LLM engaging in pleasure-seeking and pain-avoidance behaviour (ref: Birch). We would also consider behaviour of LLMs that are resemble non conscious-behaivour for example asking the LLM to output empty tokens only. We could also consider behaviour that are more intermediary for example asking the LLM to simulate a human talking engaged in tasks that require a mix of conscious and unconscious processing.
+\\
+\\
+We would compare different classes of measures: complexity, information integration and differentiation, and emergence capacity. Across these different conditions. It would be interesting to see which one correlates (or not) with global states of consciousness-like behaviour.
+
+\section{Milestones}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|p{8cm}|}
+    \hline
+    \textbf{Period} & \textbf{Phase} & \textbf{Key Deliverables} \\
+    \hline
+    Months 1-3 & Foundation & Literature synthesis, framework design \\
+    \hline
+    Months 4-6 & Development & Initial tool implementation, pilot studies \\
+    \hline
+    Months 7-9 & Validation & Controlled experiments, first publication \\
+    \hline
+    Months 10-12 & Expansion & Multi-system testing, workshop planning \\
+    \hline
+    Months 13-15 & Application & Real-world deployment, industry partnerships \\
+    \hline
+    Months 16-18 & Analysis & Data analysis, major publication preparation \\
+    \hline
+    Months 19-21 & Dissemination & Workshop execution, tool release \\
+    \hline
+    Months 22-24 & Future Planning & Nonprofit preparation, final deliverables \\
+    \hline
+    \end{tabular}
+    \caption{Research Timeline and Major Milestones}
+    \label{tab:timeline}
+    \end{table}
+    \section{Research Infrastructure and Collaboration}
+
+    \subsection{Computational Resources}
+    
+    % LLM ACCESS REQUIREMENTS:
+    % - Specific models to study (GPT-4, Claude, Llama)
+    % - White-box access needs vs API limitations
+    % - Computational hardware requirements
+    % - Data storage and processing needs
+    
+    \subsection{Key Collaborations}
+    
+    % NEUROSCIENCE EXPERTS:
+    % - Consciousness measures validation (cite specific researchers)
+    % - Cross-validation with human data
+    % - Methodological guidance
+    
+    % AI SAFETY RESEARCHERS:
+    % - Interpretability methods expertise
+    % - Integration with existing safety research
+    % - Risk assessment implications
+    
+    % INDUSTRY PARTNERS:
+    % - Practical implementation feedback
+    % - Real-world deployment considerations
+    % - Scaling to production systems
+    
+    \subsection{Community Building}
+    
+    % WORKSHOP ORGANIZATION:
+    % "Drawing on my networks in computational neuroscience and AI safety, 
+    % I will organize workshops on assessing consciousness in AI systems to create 
+    % synergies between these communities and grow the field of digital sentience"
+    
+    % TARGET VENUES:
+    % - NeurIPS consciousness workshop
+    % - ICLR interpretability sessions  
+    % - Specialized consciousness conferences
+    % - Industry AI safety meetings
+    
+    \subsection{Publication Strategy}
+    
+    % PAPER 1: Methodological framework (computational neuroscience venue)
+    % PAPER 2: Empirical results on LLMs (AI/ML venue)
+    % PAPER 3: Practical applications and implications (AI safety venue)
+\section{Career Development and Long-term Vision}
+\label{sec:career}
+% POSITIONING:
+% "By the fellowship's end, I aim to be positioned as a leading expert in 
+% quantitative consciousness assessment for AI systems"
+
+% INSTITUTION BUILDING:
+% "I aim to be better positioned to (co)-found a new organization—whether 
+% academic or nonprofit—dedicated to assessing consciousness in AI systems"
+
+% ACADEMIC PATHWAY:
+% Faculty positions bridging computer science, neuroscience, and AI safety
+% Research programs in computational consciousness
+% Student training in digital sentience research
+
+% INDUSTRY IMPACT:
+% "Build tools that frontier AI companies can integrate into consciousness 
+% evaluations, enabling more specific welfare commitments and monitoring"
+
+% REGULATORY RELEVANCE:
+% "Provide tools and advice to labs and regulators on making informed 
+% assessments about consciousness in AI systems"
+
+% FIELD DEVELOPMENT:
+% Establish digital sentience as recognized research area
+% Create standards for consciousness assessment in AI
+% Bridge neuroscience and AI safety communities permanently
+\subsection{Fellowship as Foundation for Nonprofit Leadership}
+
+This fellowship serves as a critical incubation period for establishing a specialized nonprofit organization focused on consciousness assessment infrastructure. The fellowship will:
+
+\begin{itemize}
+    \item Validate technical approaches with rigorous research
+    \item Build credibility and recognition in the field
+    \item Develop network of advisors and collaborators
+    \item Create initial tools that demonstrate practical value
+\end{itemize}
+
+\subsection{Post-Fellowship Trajectory}
+
+\subsubsection{Year 3-5: Nonprofit Launch}
+% Detail plans for organization
+% Explain 10-year vision for the field
+
+%============================================================================
+\section{Budget Justification}
+\label{sec:budget}
+% Include if required by fellowship
+% Detail salary, equipment, travel, workshop costs
+
+%============================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+This research fellowship represents a critical opportunity to establish rigorous, practical frameworks for assessing consciousness in AI systems—\impact{before such capabilities potentially emerge}. By bridging theoretical foundations with actionable tools, this work will:
+
+\begin{itemize}
+    \item Pioneer standardized assessment methodologies
+    \item Enable evidence-based approaches to AI welfare
+    \item Foster a new field of digital sentience research
+    \item Provide essential infrastructure for ethical AI development
+\end{itemize}
+
+The combination of technical rigor, practical application, and strategic dissemination positions this fellowship to have lasting impact on how we understand and relate to increasingly sophisticated AI systems.
+
+%============================================================================
+% References
+\bibliographystyle{plain}
+\bibliography{references}
+
+%============================================================================
+% Appendices
+\appendix
+
+\section{Technical Details: Consciousness Measures}
+
+% MATHEMATICAL FORMULATIONS:
+% Detailed equations for each measure
+% Computational complexity analysis
+% Implementation pseudocode
+
+
+\end{document}
