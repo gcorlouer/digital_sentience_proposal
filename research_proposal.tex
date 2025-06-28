@@ -247,7 +247,7 @@ An plausible outcome involves a mix of positive and negative results, where some
     Statistical estimators for LLM activations; validation on toy models (GPT-2 scale); behavioral condition testing; proof-of-concept results \\
     \hline
     Months 7-9 & Scale-Up \& Experiment Design & 
-    Scale to larger models (Llama, Mistral); comprehensive experiment design; computational optimization; first publication draft \\
+    Scale to larger models (Llama, Mistral); comprehensive experiment design; computational optimization; first publication \\
     \hline
     Months 10-12 & Dissemination \& Community Building & 
     \textbf{Workshop 1} with neuroscience/AI safety researchers; submit theoretical framework paper; present at ASSC; establish collaborations \\
@@ -264,7 +264,7 @@ An plausible outcome involves a mix of positive and negative results, where some
     Open-source toolkit release; assessment protocol standardization; \textbf{Workshop 3} on industry/regulatory engagement; submit empirical results \\
     \hline
     Months 22-24 & Impact \& Transition & 
-    Organization launch with funding model; integration with AI company evaluation processes; policy recommendations; leadership transition preparation \\
+    Organization launch with funding model; more dissemination, prepare integration with AI companies and regulators; transition preparation \\
     \hline
     \end{tabular}
     \caption{Research Fellowship Milestones and Timeline}
@@ -273,64 +273,71 @@ An plausible outcome involves a mix of positive and negative results, where some
 
 \subsection{Key Publications Timeline}
 \begin{itemize}
-    \item \textbf{Month 10}: Theoretical Framework Paper - Target venue: NeurIPS, ICML, or Nature Machine Intelligence
-    \item \textbf{Month 12}: ASSC Conference Presentation - "Information-Theoretic Consciousness Assessment in AI Systems"
-    \item \textbf{Month 18}: Empirical Validation Paper - Target venue: ICLR, AAAI, or Journal of AI Research
-    \item \textbf{Month 21}: Methods Paper - Target venue: Frontiers in Computational Neuroscience or AI Magazine
-    \item \textbf{Month 24}: Policy/Impact Paper - Target venue: AI \& Society or Science Policy Forum
+    \item Theoretical Framework Paper with validation on toy models - Target venues: ICLR/ICML
+    \item \textbf{Month 10}: ASSC Conference Presentation - "Information-Theoretic measures of consciousness in AI Systems"
+    \item \textbf{Month 13}: Empirical results on open source large models. Target venues: NeurIPS
+    \item \textbf{Month 21}: Policy/Impact Paper
 \end{itemize}
 
-\subsection{Workshop Series: "Consciousness in Artificial Intelligence"}
+\subsection{Workshop Series: Consciousness in Artificial Intelligence}
+The goal of the workshop will be to refine ideas, stimulate collaborations, and get feedback before doing the difficult work.
 \begin{itemize}
-    \item \textbf{Workshop 1 (Month 11)}: "Foundations and Methods" - Focus on theoretical frameworks and initial results
-    \item \textbf{Workshop 2 (Month 17)}: "Applications and Validation" - Advanced methods and multi-model results  
-    \item \textbf{Workshop 3 (Month 20)}: "Industry and Policy" - Practical implementation and regulatory considerations
+    \item \textbf{Workshop 1 (Month 3)}: Foundations and Methods - Focus on theoretical frameworks and initial results
+    \item \textbf{Workshop 2 (Month 10)}: Applications and Validation - Advanced methods and multi-model results  
+    \item \textbf{Workshop 3 (Month 19)}: Industry and Policy - Practical implementation and regulatory considerations
 \end{itemize}
     \section{Research Infrastructure and Collaboration}
 
-    \subsection{Computational Resources}
+    \subsection{Computational Resources and Budget}
     
-    % LLM ACCESS REQUIREMENTS:
-    % - Specific models to study (GPT-4, Claude, Llama)
-    % - White-box access needs vs API limitations
-    % - Computational hardware requirements
-    % - Data storage and processing needs
+    The research program requires computational infrastructure for two primary activities: extracting neural activations from language models during inference and computing information-theoretic measures on high-dimensional activation data. We estimate a total compute budget of \textbf{\$6,500} over the 24-month fellowship period, structured to support progressive scaling from toy models to state-of-the-art systems.
+    
+    \textbf{Phase 1: Toy Model Validation (Months 1-6) - \$800}
+    Initial validation experiments will utilize GPT-2 scale models (117M-1.5B parameters) that can run efficiently on modest hardware. These experiments require approximately 200 GPU hours on V100 or A100 instances (\$4/hour average) for activation extraction across diverse behavioral conditions and information-theoretic measure computation. Storage requirements include 50GB for activation datasets and intermediate computational results.
+    
+    \textbf{Phase 2: Scale-Up to Large Models (Months 7-18) - \$4,200}
+    Experiments on state-of-the-art open-source models (10B-70B parameters) such as Llama-2, Mistral-8x7B, and similar architectures require more substantial computational resources. We allocate 600 GPU hours (\$7/hour average) for inference runs with activation extraction, plus 400 CPU hours (\$0.50/hour) for information-theoretic measure computation on extracted activations. Additional storage of 200GB accommodates larger activation datasets from multiple model architectures.
+    
+    \textbf{Phase 3: Comprehensive Analysis (Months 19-24) - \$1,500}
+    Final validation across multiple model families and behavioral conditions requires 300 additional GPU hours and extended computational analysis. This phase includes potential fine-tuning experiments (though no full training) and comprehensive comparative analysis across model architectures.
+    
+    The computational approach prioritizes efficiency by extracting and storing activations once, then performing multiple information-theoretic analyses offline. We will leverage academic cloud computing credits and institutional resources to supplement the budget when available.
+    
+    \subsection{Workshop and Conference Budget}
+    
+    Community building and dissemination activities require \textbf{\$3,500} over the fellowship period for workshop organization and conference participation.
+    
+    \textbf{Workshop Organization (3 workshops) - \$2,100}
+    Each workshop requires venue costs (\$300), catering for 25-30 participants (\$400), and materials/logistics (\$100), totaling \$800 per workshop. Workshops will be strategically located to maximize attendance from key research communities: neuroscience of consciousness, AI safety, and digital sentience researchers.
+    
+    \textbf{Conference Participation - \$1,400}
+    Conference presentations target high-impact venues including ASSC (\$200 registration), NeurIPS/ICML (\$600 registration), and specialized AI safety conferences (\$300 registration). Travel and accommodation costs are estimated at \$300 per conference, assuming strategic conference selection and cost-effective travel arrangements.
+    
+    \textbf{Total Research Infrastructure Budget: \$10,000}
     
     \subsection{Key Collaborations}
     
-    % NEUROSCIENCE EXPERTS:
-    % - Consciousness measures validation (cite specific researchers)
-    % - Cross-validation with human data
-    % - Methodological guidance
+    \textbf{Neuroscience of Consciousness Experts}
+    The research program will benefit from established relationships with leading researchers in consciousness science. Fernando Rosas (Imperial College London) and Pedro Mediano (University of Cambridge) will provide guidance on information decomposition methods and their application to consciousness assessment. Lionel Barnett (University of Sussex) will advise on dynamical independence measures and emergence detection techniques. Anil Seth (University of Sussex) will offer feedback on the overall theoretical framework and connections to predictive processing approaches to consciousness.
     
-    % AI SAFETY RESEARCHERS:
-    % - Interpretability methods expertise
-    % - Integration with existing safety research
-    % - Risk assessment implications
+    \textbf{AI Safety and Interpretability Researchers}
+    Collaboration with computational mechanics experts Adam Shai and Paul Riechers will enhance the theoretical foundations of emergence measures and their implementation in neural networks. Their expertise in information-theoretic approaches to complex systems will be particularly valuable for developing novel emergence detection methods adapted to transformer architectures.
     
-    % INDUSTRY PARTNERS:
-    % - Practical implementation feedback
-    % - Real-world deployment considerations
-    % - Scaling to production systems
+    \textbf{Digital Sentience and AI Welfare Organizations}
+    Strategic partnerships with Eleos AI will provide practical perspectives on consciousness assessment implementation and welfare considerations for AI systems. Collaboration with researchers at NYU Center for Mind, Brain and Consciousness will connect the research to broader digital sentience initiatives and ensure alignment with emerging consensus in the field.
     
-    \subsection{Community Building}
+    \textbf{Technical Implementation Support}
+    Following successful toy model validation (Month 6), we will engage a machine learning engineer (part-time, 6-month contract, \$15,000) to optimize and scale consciousness measures to large-scale models. This collaboration will ensure robust implementation of information-theoretic measures at scale and development of the open-source toolkit for broader community use.
     
-    % WORKSHOP ORGANIZATION:
-    % "Drawing on my networks in computational neuroscience and AI safety, 
-    % I will organize workshops on assessing consciousness in AI systems to create 
-    % synergies between these communities and grow the field of digital sentience"
+    \subsection{Community Building Strategy}
     
-    % TARGET VENUES:
-    % - NeurIPS consciousness workshop
-    % - ICLR interpretability sessions  
-    % - Specialized consciousness conferences
-    % - Industry AI safety meetings
+    Drawing on established networks in computational neuroscience and AI safety, the fellowship will organize workshops that create synergies between traditionally separate research communities. The workshop series "Consciousness in Artificial Intelligence" will bring together consciousness researchers, AI safety experts, and digital sentience advocates to establish shared research agendas and collaborative frameworks.
     
-    \subsection{Publication Strategy}
+    Workshop participants will include both established researchers and early-career scientists, fostering knowledge transfer and field development. Each workshop will produce concrete outcomes including shared datasets, standardized assessment protocols, and collaborative research proposals that extend beyond the fellowship period.
     
-    % PAPER 1: Methodological framework (computational neuroscience venue)
-    % PAPER 2: Empirical results on LLMs (AI/ML venue)
-    % PAPER 3: Practical applications and implications (AI safety venue)
+    \subsection{Publication and Dissemination Strategy}
+    
+    Publications will target venues that bridge consciousness science and AI research, including computational neuroscience journals, top-tier machine learning conferences, and specialized AI safety venues. The publication strategy emphasizes open science principles with all datasets, code, and analysis pipelines made publicly available to accelerate field development and enable independent verification of results.
 \section{Career Development and Long-term Vision}
 \label{sec:career}
 % POSITIONING:
