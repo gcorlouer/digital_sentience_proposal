@@ -129,7 +129,6 @@ The fellowship will culminate in establishing the groundwork for a dedicated non
 
 \section{Background}
 
-
 \subsection{Candidate Measures of Consciousness}
 To study consciousness in AI, particularly in large language models, we cannot rely solely on behavioral experiments that analyze input-output patterns. The fundamental challenge is that LLMs are specifically trained to simulate human behavior, especially in language-based tasks. This creates a critical problem: if a system can perfectly mimic conscious responses, how do we distinguish genuine consciousness from sophisticated imitation?
 
@@ -148,7 +147,7 @@ The key advantage of this methodology is that it leverages our most advanced sci
 \label{sec:background}
 % We review the main measures of consciousness that have been applied in the brain and how they correlate with global states of consciousness in humans.
 
-\subsubsection{Complexity measures}
+\subsection{Complexity measures}
 
 Complexity measures represent the most empirically validated approach to consciousness assessment, with over two decades of research demonstrating their reliability across diverse states of consciousness in humans. These measures capture a fundamental insight: conscious experience appears to require a specific type of neural complexity that balances two seemingly opposing properties—\textit{integration} (the system behaving as a unified whole) and \textit{differentiation} (the system maintaining diverse, distinguishable patterns of activity). When consciousness is present, brain activity exhibits rich, varied patterns that nonetheless remain coordinated across different regions. When consciousness is absent—during deep sleep, anesthesia, or disorders of consciousness—neural activity becomes either overly synchronized and stereotypical or fragmented into independent local patterns.
 
@@ -159,7 +158,7 @@ Perturbational complexity measures represent a more sophisticated approach that 
 Integration and differentiation measures provide the theoretical foundation underlying complexity approaches, drawing from both Integrated Information Theory and causal analysis frameworks. Causal density measures the overall causal interactivity within a neural system using time-series analysis to quantify how much different brain regions causally influence each other—high causal density indicates that the system operates as an integrated whole rather than a collection of independent parts. Weak approaches to Integrated Information Theory offer computationally tractable approximations of the full IIT framework, focusing on measuring how much information a system generates that cannot be reduced to its individual parts. These measures capture the intuition that consciousness requires genuine system-level properties that emerge from but cannot be predicted by the activity of isolated components. While full IIT calculations remain computationally intractable for realistic brain networks, weak IIT approaches and causal density measures provide practical implementations that have shown promising results in consciousness research, offering theoretically grounded methods for quantifying the integration-differentiation balance that appears fundamental to conscious experience. 
 
 
-\subsubsection{Measures of emergence}
+\subsection{Measures of emergence}
 % Talk about dynamical independence and synergistic information
 Imagine a complex system with many interacting microscopic components, for example connected neurons interacting across the layers of some deep neural network of some AI system. Understanding the system from its microscopic components is computationally challenging and generally not the most effective scale to understand the behaviour downstream of that neural activity. Instead we are interested in finding useful coarse-grainings of some system-variables that simplify the microscopic interactions between the neurons to capture the neural activity of the AI system. Such coarse grained variables can display a rich behaviour that is not apparent from the microscopic components alone in which case we say that such variables are \textit{emergent}. The prototypical example of a system displaying emergent phenomena is a flock of birds in which individual interactions between brids give rise to novel dynamics at the level of the flock which can be described in its own terms by macroscopic variables coarse-grained from the individual birds.
 
@@ -169,7 +168,7 @@ One particular approach to measuring information closure is dynamical independen
 
 The second class of measures of emergence that I am interested in applying would be to look into \textit{whole-part} measure of emergence via \textit{synergistic information}. Synergistic information is a measure of the information that is gained by considering the joint distribution of mutiple variables compared to the information that is gained by considering each variable independently. Synergistic information has been identified as a promising measures of emergence in the context of neuroscience (ref) and has been related to the emergence of a global neural workspace in the brain (ref). Conceptually, synergistic information comes from the formalism of mutual information decomposition which decomposes the mutual information between two variables into three terms: unique, redundant and synergistic information between random variables (ref). Using synergistic information, we could measure the emergence capacity of a system across groupings of pairs of neurons in a neural network.
 
-\subsubsection{Applications in humans}
+\subsection{Applications in humans}
 
 Information-theoretic metrics have demonstrated remarkable consistency in tracking consciousness across diverse neural recording modalities and experimental paradigms in human studies. Over two decades of empirical research spanning more than 80 studies have established these measures as reliable, quantitative correlates of global states of consciousness, providing a promising direction for extending consciousness assessment beyond biological systems \citep{Casali2013, Schartner2015, Sarasso2021}. The convergence of findings across electroencephalography (EEG), magnetoencephalography (MEG), functional magnetic resonance imaging (fMRI), and intracranial recordings strongly suggests that information complexity represents an important property of conscious neural processing that can be captured by various measurement techniques \citep{Zhang2001, Liu2019, Luppi2022}.
 
@@ -234,30 +233,97 @@ An plausible outcome involves a mix of positive and negative results, where some
 \section{Milestones}
 \begin{table}[h]
     \centering
-    \begin{tabular}{|l|l|p{8cm}|}
+    \begin{tabular}{|l|l|p{9cm}|}
     \hline
-    \textbf{Period} & \textbf{Phase} & \textbf{Key Deliverables} \\
+    \textbf{Timeline} & \textbf{Phase} & \textbf{Key Deliverables \& Milestones} \\
     \hline
-    Months 1-3 & Foundation & Literature synthesis, framework design \\
+    \multicolumn{3}{|c|}{\textbf{Year 1: Foundation and Validation}} \\
     \hline
-    Months 4-6 & Development & Initial tool implementation, pilot studies \\
+    Months 1-3 & Literature \& Framework & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+        \item Systematic review of consciousness measures in human neuroscience
+        \item Mathematical framework specification for multi-dimensional consciousness indicator
+        \item Initial implementation of complexity, integration/differentiation, and emergence measures
+    \end{itemize} \\
     \hline
-    Months 7-9 & Validation & Controlled experiments, first publication \\
+    Months 4-6 & Statistical Methods \& Toy Model Validation & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+        \item Statistical estimators for consciousness measures in LLM activations
+        \item Validation experiments on toy models (GPT-2 scale)
+        \item Simple behavioral condition testing (conscious vs unconscious tasks)
+        \item Proof-of-concept results demonstrating measure sensitivity
+    \end{itemize} \\
     \hline
-    Months 10-12 & Expansion & Multi-system testing, workshop planning \\
+    Months 7-9 & Scale-Up \& Experiment Design & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+        \item Scale methods to larger open-source models (Llama, Mistral)
+        \item Design comprehensive behavioral experiments for consciousness assessment
+        \item Computational optimization for real-time application
+        \item First major publication draft (theoretical framework paper)
+    \end{itemize} \\
     \hline
-    Months 13-15 & Application & Real-world deployment, industry partnerships \\
+    Months 10-12 & Dissemination \& Community Building & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+        \item \textbf{Workshop 1}: Invite neuroscience, AI safety, AI welfare researchers
+        \item Submit theoretical framework paper to top-tier ML conference
+        \item Present at Association for Scientific Study of Consciousness (ASSC)
+        \item Establish collaborations and advisory network
+    \end{itemize} \\
     \hline
-    Months 16-18 & Analysis & Data analysis, major publication preparation \\
+    \multicolumn{3}{|c|}{\textbf{Year 2: Application and Organization Building}} \\
     \hline
-    Months 19-21 & Dissemination & Workshop execution, tool release \\
+    Months 13-15 & Multi-Model Application & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+        \item Apply consciousness measures to diverse state-of-the-art open-source models
+        \item Comparative analysis across different architectures and scales
+        \item Empirical validation paper preparation
+        \item Industry partnership development for practical applications
+    \end{itemize} \\
     \hline
-    Months 22-24 & Future Planning & Nonprofit preparation, final deliverables \\
+    Months 16-18 & Organization Development & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+        \item Begin establishing nonprofit organization for AI consciousness assessment
+        \item Recruit key collaborators and advisors
+        \item Develop governance structure and research agenda
+        \item \textbf{Workshop 2}: Advanced methods and applications focus
+    \end{itemize} \\
+    \hline
+    Months 19-21 & Tools \& Standards & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+        \item Open-source toolkit release for consciousness assessment
+        \item Standardization of assessment protocols
+        \item \textbf{Workshop 3}: Industry and regulatory engagement
+        \item Submit empirical results to leading AI/ML venues
+    \end{itemize} \\
+    \hline
+    Months 22-24 & Impact \& Transition & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+        \item Organization launch with sustainable funding model
+        \item Integration with frontier AI company evaluation processes
+        \item Policy recommendations for consciousness assessment standards
+        \item Prepare for independent organization leadership transition
+    \end{itemize} \\
     \hline
     \end{tabular}
-    \caption{Research Timeline and Major Milestones}
-    \label{tab:timeline}
+    \caption{Research Fellowship Milestones and Timeline}
+    \label{tab:milestones}
     \end{table}
+
+\subsection{Key Publications Timeline}
+\begin{itemize}
+    \item \textbf{Month 10}: Theoretical Framework Paper - Target venue: NeurIPS, ICML, or Nature Machine Intelligence
+    \item \textbf{Month 12}: ASSC Conference Presentation - "Information-Theoretic Consciousness Assessment in AI Systems"
+    \item \textbf{Month 18}: Empirical Validation Paper - Target venue: ICLR, AAAI, or Journal of AI Research
+    \item \textbf{Month 21}: Methods Paper - Target venue: Frontiers in Computational Neuroscience or AI Magazine
+    \item \textbf{Month 24}: Policy/Impact Paper - Target venue: AI \& Society or Science Policy Forum
+\end{itemize}
+
+\subsection{Workshop Series: "Consciousness in Artificial Intelligence"}
+\begin{itemize}
+    \item \textbf{Workshop 1 (Month 11)}: "Foundations and Methods" - Focus on theoretical frameworks and initial results
+    \item \textbf{Workshop 2 (Month 17)}: "Applications and Validation" - Advanced methods and multi-model results  
+    \item \textbf{Workshop 3 (Month 20)}: "Industry and Policy" - Practical implementation and regulatory considerations
+\end{itemize}
     \section{Research Infrastructure and Collaboration}
 
     \subsection{Computational Resources}
