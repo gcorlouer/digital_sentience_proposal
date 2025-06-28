@@ -392,6 +392,36 @@ We would like to have some measure $C$ such that $C(X_{t\in E})$ measures the de
 
 For example, suppose that we instruct the model $M$ with a sequence of tokens $q$. After seeing the sequence $q$ the model takes a sequence of actions in the form of a sequence of tokens $b$: the behavior of the model $M$. We are interested in measuring $C((X_t)|q)$ for $t$ running over the indices of the tokens in the sequence $b$ given instruction $q$. In particular, we want to compare $C((X_t)|q_1)$ and $C((X_t)|q_2)$ for two different instructions $q_1$ and $q_2$ instructing the model to engage in behavior mimicking different states of consciousness in humans. We want to test the hypothesis that $C_M(X_{t\in E}|q_1) > C_M(X_{t\in E}|q_2)$ when we know that $C_H(X_{t\in E}|q_1) > C_H(X_{t\in E}|q_2)$ where $H$ is a human performing a similar task.
 
+\section{Technical Implementation Details}
+
+\subsection{Mathematical Framework for Consciousness Measures}
+
+We propose to decompose consciousness measures into three classes: measures of complexity $\chi$, measures of information integration and differentiation $\phi$, and measures of emergence $\psi$. The overall indicator of consciousness would be a weighted sum of these measures.
+
+\subsubsection{Complexity Measures}
+
+Consider an LLM doing some task i.e. predicting some output token $x_t^+$ given an input sequence $x_t^-$. We denote by $X_t^l$ the vector of neural activations of the LLM at token $t$ and layer $l$ and we note $X_t = (X_t^1, \ldots, X_t^L)$ the vector of all neural activations at token $t$. Denote $\chi(X_t)$ the complexity of the neural activations at token $t$. 
+
+An example of such a measure of complexity is the entropy rate of the neural activations at token $t$. Essentially, the entropy rate $H(X_t | X_t^-)$ measures the entropy of the neural activation $X_t$ at token $t$ conditioned on the past activations $X_t^-$. As a proxy of entropy rate, we could use Lempel-Ziv complexity which is a measure of the complexity of a sequence of symbols that has been previously used in neuroscience to measure signal diversity \citep{Schartner2015}.
+
+\subsubsection{Information Integration and Differentiation Measures}
+
+For measures of information integration and differentiation, we could use the recent work on mutual information decomposition \citep{Williams2010, Rosas2024}. Given three random variables $X, Y, Z$, the mutual information $I((X Y);Z)$ can be decomposed into three terms: unique information that each random variable has about $Z$, information that is redundant across $X$ and $Y$ to predict $Z$ and synergistic information $I(X; Y; Z)$. 
+
+For an LLM we could for example consider $X$ and $Y$ could be some partition of past activations of the LLM and $Z$ could be the current overall activations of the LLM. But other partitions are possible and should be investigated. Information differentiation and integration would be high if the amount of synergistic information and the amount of unique information are high. Recent work by Rosas et al. has shown a scalable approach to perform mutual information decomposition on deep neural networks that we would leverage to measure information integration and differentiation in the activations of the LLM \citep{Rosas2024}.
+
+\subsubsection{Emergence Measures}
+
+A particular class of measures of emergence is the notion of information closure. Information closure can be estimated via dynamical independence \citep{Barnett2023}. In particular, given some neural activations $X_t$ at token $t$, we could estimate the emergence capacity $\psi_c((X_t)_{t\in E})$ in the LLM during inference during some epoch $E$ corresponding to a particular behaviour of the LLM. This could be done by estimating the number of informationally closed coarse-grainings across projections of the activations of the LLM over subspaces of lower dimension. We would leverage previous work on estimating dynamical independence in linear stochastic dynamical systems to estimate the amount of information closure in the activations of the LLM.
+
+\subsection{Experimental Design Details}
+
+We would estimate these measures on LLMs during different conditions where the LLM engages in conscious-like behaviour and unconscious-like behaviour. Examples of conscious-like behaviour would be an LLM engaging in tasks that require meta-cognition, such as mathematical reasoning or introspection. We could also use less introspective tasks and morally more salient tasks such as an LLM engaging in pleasure-seeking and pain-avoidance behaviour.
+
+We would also consider behaviour of LLMs that resemble non-conscious behaviour, for example asking the LLM to output empty tokens only. We could also consider behaviour that is more intermediary, for example asking the LLM to simulate a human talking engaged in tasks that require a mix of conscious and unconscious processing.
+
+We would compare different classes of measures: complexity, information integration and differentiation, and emergence capacity across these different conditions. It would be interesting to see which measures correlate (or not) with global states of consciousness-like behaviour.
+
 % MATHEMATICAL FORMULATIONS:
 % Detailed equations for each measure
 % Computational complexity analysis
