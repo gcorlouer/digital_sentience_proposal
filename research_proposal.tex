@@ -4,7 +4,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{cite}
+\usepackage{natbib}
 \usepackage{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -128,6 +128,8 @@ Beyond individual research outputs, the fellowship will catalyze field-building 
 The fellowship will culminate in establishing the groundwork for a dedicated nonprofit organization focused on empirical consciousness assessment in AI systems. This institutional platform will provide sustained infrastructure for advancing the field beyond the fellowship period, offering consulting services to AI labs, developing open-source assessment tools, and maintaining research continuity. By combining rigorous empirical methods with strategic field-building and institutional development, this fellowship will create lasting impact on our capacity to understand and assess consciousness in AI systems.
 
 \section{Background}
+
+
 \subsection{Candidate Measures of Consciousness}
 To study consciousness in AI, particularly in large language models, we cannot rely solely on behavioral experiments that analyze input-output patterns. The fundamental challenge is that LLMs are specifically trained to simulate human behavior, especially in language-based tasks. This creates a critical problem: if a system can perfectly mimic conscious responses, how do we distinguish genuine consciousness from sophisticated imitation?
 
@@ -168,6 +170,16 @@ One particular approach to measuring information closure is dynamical independen
 The second class of measures of emergence that I am interested in applying would be to look into \textit{whole-part} measure of emergence via \textit{synergistic information}. Synergistic information is a measure of the information that is gained by considering the joint distribution of mutiple variables compared to the information that is gained by considering each variable independently. Synergistic information has been identified as a promising measures of emergence in the context of neuroscience (ref) and has been related to the emergence of a global neural workspace in the brain (ref). Conceptually, synergistic information comes from the formalism of mutual information decomposition which decomposes the mutual information between two variables into three terms: unique, redundant and synergistic information between random variables (ref). Using synergistic information, we could measure the emergence capacity of a system across groupings of pairs of neurons in a neural network.
 
 \subsubsection{Applications in humans}
+
+Information-theoretic metrics have demonstrated remarkable consistency in tracking consciousness across diverse neural recording modalities and experimental paradigms in human studies. Over two decades of empirical research spanning 86 validated studies have established these measures as reliable, quantitative correlates of global states of consciousness, providing a promising direction for extending consciousness assessment beyond biological systems \citep{Casali2013, Schartner2015, Sarasso2021}. The convergence of findings across electroencephalography (EEG), magnetoencephalography (MEG), functional magnetic resonance imaging (fMRI), and intracranial recordings strongly suggests that information complexity represents an important property of conscious neural processing that can be captured by various measurement techniques \citep{Zhang2001, Liu2019, Luppi2022}.
+
+The most extensively validated approach employs perturbational complexity measures, particularly the Perturbational Complexity Index (PCI), which actively probes the brain's capacity for complex responses to external stimulation \citep{Casali2013, Casarotto2016}. PCI works by applying transcranial magnetic stimulation and measuring the spatiotemporal complexity of resulting neural activity patterns. Across multiple large-scale clinical studies, PCI has achieved strong discrimination between conscious and unconscious states \citep{Sarasso2015, Casarotto2016}. Most remarkably, PCI can separate minimally conscious state from vegetative state/unresponsive wakefulness syndrome with greater than 95\% sensitivity, enabling detection of covert awareness in patients who appear behaviorally unresponsive \citep{Casarotto2016}. This clinical validation shows that information-theoretic measures can reveal global states of consciousness even when behavioral indicators fail, suggesting their utility for assessing awareness in systems that may not exhibit conventional conscious behaviors.
+
+Other complexity measures provide complementary passive assessment approaches that require no external intervention, making them particularly relevant for continuous monitoring applications. Lempel-Ziv Complexity consistently decreases 30-50\% with deepening anesthesia across multiple anesthetic agents \citep{Zhang2001, Schartner2015}, while multiscale entropy measures—which quantify complexity across multiple temporal scales by examining entropy at different levels of signal coarse-graining—reveal that unconscious states are characterized by stronger low-frequency synchrony at the expense of multiscale complexity \citep{Liu2019}. These temporal measures capture the "entropic brain" hypothesis that conscious states exhibit higher entropy and algorithmic complexity than unconscious states \citep{Carhart-Harris2014}. Shannon entropy, spectral entropy, and permutation-based variants all show robust state-dependent changes, with pooled meta-analyses yielding strong effect sizes for distinguishing wake from deep sleep or anesthesia \citep{Liu2023, Schartner2015}. The consistency of these findings across different entropy formulations suggests that the underlying relationship between information diversity and consciousness is robust.
+
+Emerging measures based on partial information decomposition \citep{Williams2010, Mediano2022} have suggested novel correlates of consciousness-related information processing changes across different brain states. Integrated Information Decomposition frameworks suggest that conscious wakefulness is characterized by predominantly synergistic interactions between association cortices, while these same regions collapse to redundant processing during deep anesthesia and disorders of consciousness \citep{Luppi2022}. These synergistic information measures capture a "synergistic global workspace" \citep{Luppi2022} that quantifies how brain regions combine their individual contributions to generate system-level properties that exceed simple summation of components \citep{Mediano2022}. Although computationally intensive, these measures provide theoretical grounding for consciousness assessment by directly testing predictions about information integration that emerge from major consciousness theories. Recent advances in scalable computation make these approaches increasingly feasible for real-time applications \citep{Rosas2024}.
+
+The clinical translation of these information-theoretic measures has already begun transforming consciousness assessment in medical settings, demonstrating practical utility that extends beyond research applications. PCI enables bedside detection of covert awareness in unresponsive patients, while entropy-based measures enhance anesthesia depth monitoring and outperform traditional spectral indices in pediatric populations \citep{Casarotto2016, Zhang2001}. Implementation challenges including equipment requirements for TMS-EEG and artifact sensitivity of entropy measures are being addressed through advances in portable EEG systems and real-time complexity computation algorithms \citep{Sarasso2021}. These developments suggest that information-theoretic consciousness assessment is transitioning from experimental technique to clinical tool, providing precedent for similar applications in artificial intelligence systems where behavioral assessment may prove insufficient for detecting underlying conscious processes.
 
 %============================================================================
 \section{Experimental paradigm}
@@ -334,7 +346,7 @@ The combination of technical rigor, practical application, and strategic dissemi
 
 %============================================================================
 % References
-\bibliographystyle{plain}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 %============================================================================
